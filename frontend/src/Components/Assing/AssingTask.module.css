@@ -1,0 +1,169 @@
+/* Container for the entire task list */
+.taskListContainer {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual task items */
+.taskItem {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Task title */
+.taskTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Task description */
+.taskDescription {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Metadata container for task deadline and assigned user */
+.taskMetadata {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Deadline styling */
+.taskDeadline {
+    margin-right: 20px;
+}
+
+/* Assigned user styling */
+.assignedUser {
+    color: #333;
+}
+
+/* Badge for task status */
+.statusBadge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Status-specific colors */
+.statusNotStarted {
+    background-color: #ffb3b3;
+    color: #d50000;
+}
+
+.statusInProgress {
+    background-color: #ffecb3;
+    color: #ff6f00;
+}
+
+.statusCompleted {
+    background-color: #c8e6c9;
+    color: #388e3c;
+}
+
+/* Container for edit and delete buttons */
+.taskActions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Edit button styling */
+.editButton {
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.editButton:hover {
+    background-color: #45a049;
+}
+
+/* Delete button styling */
+.deleteButton {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.deleteButton:hover {
+    background-color: #e53935;
+}
+
+/* Edit task form container */
+.editFormContainer {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    top: 10rem;
+ 
+}
+
+/* Form field labels */
+.editFormContainer label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Input fields in the edit form */
+.editFormContainer input,
+.editFormContainer textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Save button */
+.editFormContainer button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.editFormContainer button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Cancel button */
+.editFormContainer button[type="button"] {
+    padding: 10px 15px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.editFormContainer button[type="button"]:hover {
+    background-color: #bdbdbd;
+}
