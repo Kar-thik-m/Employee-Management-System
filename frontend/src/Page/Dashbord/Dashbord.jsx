@@ -1,4 +1,4 @@
-import DashStyle from "./DashBord.module.css";
+import DashStyle from "../Dashbord/DashBord.module.css";
 import { GetDashboard } from "../../Redux/Action/TaskAction";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
