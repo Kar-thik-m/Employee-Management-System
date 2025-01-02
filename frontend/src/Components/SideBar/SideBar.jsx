@@ -32,12 +32,7 @@ const SideBar = () => {
 
 
 
-                <li className={SidebarStyle.menuItem}>
-                    <Link to="/reports" className={SidebarStyle.link}>Reports</Link>
-                </li>
-                <li className={SidebarStyle.menuItem}>
-                    <Link to="/work-history" className={SidebarStyle.link}>Work History</Link>
-                </li>
+               
                 <li className={SidebarStyle.menuItem}>
                     <Link to="/profile" className={SidebarStyle.link}>Profile</Link>
                 </li>

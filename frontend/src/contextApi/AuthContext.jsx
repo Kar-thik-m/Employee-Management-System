@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Url } from '../config'; // Assuming 'Url' is the base URL for API requests
+import { Url } from '../../config';
 
 const AuthContext = createContext();
 
@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       const token = localStorage.getItem('token');
       if (token) {
         try {
-          const response = await fetch(`http://localhost:4000/api/user/loaduser`, {
+          const response = await fetch(`${Url}/api/user/loaduser`, {
             headers: { Authorization: `Bearer ${token}` },
           });
 
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/user/register`, {
+      const response = await fetch(`${Url}/api/user/register`, {
         method: 'POST',
         body: userData, 
         headers: userData instanceof FormData ? {} : { 'Content-Type': 'application/json' },
@@ -59,7 +59,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (credentials) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/user/login`, {
+      const response = await fetch(`${Url}/api/user/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(credentials),
@@ -81,7 +81,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('token');
-    setError(null); // Clear error on logout
+    setError(null); 
   };
 
   return (

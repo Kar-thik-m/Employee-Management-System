@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     loading: false,
     error: null,
-    tasks: [],            
+    task: [],            
     employeeActivity: null,
     dashboard: null,
     adminData: null,
@@ -19,7 +19,7 @@ const taskSlice = createSlice({
         },
         taskSuccess(state, action) {
             state.loading = false;
-            state.tasks = action.payload; // Assuming payload is an array of tasks
+            state.task = action.payload; // Assuming payload is an array of tasks
         },
         taskFailure(state, action) {
             state.loading = false;
@@ -31,7 +31,7 @@ const taskSlice = createSlice({
         },
         taskCreateSuccess(state, action) {
             state.loading = false;
-            state.tasks.push(action.payload); // Push the newly created task to the tasks array
+            state.task.push(action.payload); // Push the newly created task to the tasks array
         },
         taskCreateFailure(state, action) {
             state.loading = false;

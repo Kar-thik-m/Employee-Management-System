@@ -7,7 +7,7 @@ import taskstyles from "../TaskList/TaskList.module.css";
 const TaskList = () => {
     const dispatch = useDispatch();
     const { task, loading, error } = useSelector((state) => state?.tasks);
-
+console.log(task)
     const [selectedTime, setSelectedTime] = useState({});
     const [selectedStatus, setSelectedStatus] = useState({});
 

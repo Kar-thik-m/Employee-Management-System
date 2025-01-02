@@ -10,7 +10,7 @@ import {
     deleteTaskFailure, deleteTaskRequest, deleteTaskSuccess,
     taskCreateFailure, taskCreateRequest, taskCreateSuccess
 } from "../Slice/TaskSlice";
-
+import { Url } from "../../../config";
 // Get all tasks for user
 export const GetAllTask = () => async (dispatch) => {
     try {
@@ -22,7 +22,7 @@ export const GetAllTask = () => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/get-all-task`, {
+        const response = await fetch(`${Url}/api/task/get-all-task`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -54,7 +54,7 @@ export const updateTaskTime = (id, deadline) => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/update-time/${id}`, {
+        const response = await fetch(`${Url}/api/task/update-time/${id}`, {
             method: "PUT",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -87,7 +87,7 @@ export const updateStatus = (id, status) => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/update-status/${id}`, {
+        const response = await fetch(`${Url}/api/task/update-status/${id}`, {
             method: "PUT",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -120,7 +120,7 @@ export const GetDashboard = () => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/dashboard`, {
+        const response = await fetch(`${Url}/api/task/dashboard`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -152,7 +152,7 @@ export const GetAllAdminTask = () => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/get-all-task-by-creator`, {
+        const response = await fetch(`${Url}/api/task/get-all-task-by-creator`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -184,7 +184,7 @@ export const GetEmployeeActivity = () => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/view-employee-activity`, {
+        const response = await fetch(`${Url}/api/task/view-employee-activity`, {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -216,7 +216,7 @@ export const editTask = (id, updatedData) => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/update-task/${id}`, {
+        const response = await fetch(`${Url}/api/task/update-task/${id}`, {
             method: "PUT",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -249,7 +249,7 @@ export const deleteTask = (id) => async (dispatch) => {
             return;
         }
 
-        const response = await fetch(`http://localhost:4000/api/task/delete-task/${id}`, {
+        const response = await fetch(`${Url}/api/task/delete-task/${id}`, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -282,7 +282,7 @@ export const createTask = (taskData) => async (dispatch) => {
             return;
         }
 
-        const response = await fetch('http://localhost:4000/api/task/create-task', {
+        const response = await fetch(`${Url}/api/task/create-task`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
