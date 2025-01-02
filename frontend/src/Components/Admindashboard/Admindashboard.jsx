@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../../contextApi/AuthContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { GetEmployeeActivity, createTask } from '../../Redux/Action/TaskAction';
-import Astyles from './AdminDashboard.module.css';
+import Astyles from '../Admindashboard/Admindashboard.module.css';
 import { format } from 'date-fns';
 
 const Admindashboard = () => {
