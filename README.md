@@ -1,4 +1,4 @@
-# yourshop
+# Employee Management System 
 
 ## Employee Management System is a platform that enables employees to log working hours, track tasks, and manage project-related activities. Admins can oversee employee work, manage records, and generate performance reports, providing
 [Visit the live site](https://employeemangesite.netlify.app/)
