@@ -12,7 +12,7 @@
 **Frontend:**
 - **React.Js**
   
-  **Packages Used**
+  - **Packages Used**
    - Redux (state management)
    - React Router DOM
    
